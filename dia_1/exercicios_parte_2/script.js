@@ -1,0 +1,40 @@
+// Execicio 1 -Opção 1 de resolução
+// Link que ajudou na resolução do exercício: https://www.devmedia.com.br/calculando-fatorial-em-java/14273
+const fatorial = (number) => {
+    let fatorial = number;
+    let cont = fatorial;
+
+    while (fatorial > 1 || fatorial === 0) {
+        if (fatorial === 0) {
+            fatorial = 1;
+            return `O fatorial de ${number} é: ${fatorial}`;
+        }
+        cont *= (fatorial-1);
+        fatorial -= 1;
+    }
+    return `O fatorial de ${number} é: ${cont}`;
+}
+console.log(fatorial(0));
+
+// Exercicio 1 - Opção 2 de resolução
+// https://www.guj.com.br/t/aprendendo-modo-ternario/93509/4
+const metodoRecursivo = (number) => {
+    let metodoRecursivo = fatorialRecursivo(number);
+
+    console.log(`O fatorial de ${number} é: ${metodoRecursivo}`);
+}
+
+const fatorialRecursivo = (number) => {
+    let fatorial;
+
+    if (number === 0) {
+        fatorial = 1;
+        return fatorial;
+    }
+
+    fatorial = number <= 1 ? number : (fatorialRecursivo(number -1)*number);
+
+    return fatorial;
+
+}
+metodoRecursivo(0);
