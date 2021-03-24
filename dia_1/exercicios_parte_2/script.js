@@ -46,10 +46,10 @@ const longestWord = (palavra) => {
     let maior = 0;
     let result = '';
 
-    for (const key in arrayWord) {
+    for (const key of arrayWord) {
         if (key.length > maior) {
             maior = key.length;
-            result += arrayWord[key];
+            result = key;
         }
     }
     return result;
@@ -66,6 +66,40 @@ btnExercise3.addEventListener('click', () => {
     clickCount.textContent = number;
 });
 
+// Exercicio 4
+// Função 1
+const procuraString = (string) => {
+    let frase = "Tryber x aqui!";
+    let result = "";
+
+    if (frase.search('x')) {
+        result = frase.replace('x', string);
+    }
+
+    return `"${result}"`;
+    
+}
+
+// Função 2
+// Exercício feito com a ajuda do código do Maurício Viegas
+// Link: https://github.com/mvrdgs/trybe-exercises/blob/0b7992f29e3827928bca9a287673aad4bdb17d5f/mod7/dia_1/exercicio02pt04.js
+const habilidades = ['Git', 'GitHub', 'HTML', 'CSS', 'JavaScript'];
+
+const messagem = (nome) => {
+    const user = (nome);
+
+    const mensagem = `${user} Minhas cinco principais habilidades são:
+    ${habilidades[0]};
+    ${habilidades[1]};
+    ${habilidades[2]};
+    ${habilidades[3]};
+    ${habilidades[4]};
+
+    #goTrybe` 
+    return mensagem;
+
+}
+console.log(messagem(procuraString('Gabriel')));
 
 
 
