@@ -53,7 +53,18 @@ const order = {
   
   const orderModifier = (order) => {
     // Adicione abaixo as informações necessárias.
+    const coke = order.order.drinks.coke.type;
+    let newPerson = 'deliveryPerson';
+    const deliveryPerson = 'Luiz Silva';
+    order[newPerson] = deliveryPerson;
+
+    let newTotal = 'total';
+    const total = 50;
+    order[newTotal] = total;
+
+    return `Olá ${order[newPerson]}, o total do seu pedido de muzarella, calabresa e ${coke} é R$ ${order[newTotal]} `;
+
   
   }
   
-  orderModifier(order);
+  console.log(orderModifier(order));
