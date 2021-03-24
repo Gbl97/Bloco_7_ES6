@@ -9,7 +9,7 @@ const fatorial = (number) => {
             fatorial = 1;
             return `O fatorial de ${number} é: ${fatorial}`;
         }
-        cont *= (fatorial-1);
+        cont *= (fatorial - 1);
         fatorial -= 1;
     }
     return `O fatorial de ${number} é: ${cont}`;
@@ -32,9 +32,34 @@ const fatorialRecursivo = (number) => {
         return fatorial;
     }
 
-    fatorial = number <= 1 ? number : (fatorialRecursivo(number -1)*number);
+    fatorial = number <= 1 ? number : (fatorialRecursivo(number - 1) * number);
 
     return fatorial;
 
 }
-metodoRecursivo(0);
+metodoRecursivo(-1);
+
+// Exercicio 2 
+const longestWord = (palavra) => {
+    let arrayWord = palavra.split(' ');
+    console.log(arrayWord);
+    let maior = 0;
+    let result = '';
+
+    for (const key in arrayWord) {
+        if (key.length > maior) {
+           maior = key.length; 
+           result += arrayWord[key];
+        }
+    }
+    return result;
+}
+console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
+
+
+
+
+
+
+
+
