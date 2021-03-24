@@ -48,13 +48,23 @@ const longestWord = (palavra) => {
 
     for (const key in arrayWord) {
         if (key.length > maior) {
-           maior = key.length; 
-           result += arrayWord[key];
+            maior = key.length;
+            result += arrayWord[key];
         }
     }
     return result;
 }
 console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu"));
+
+// Exercicio 3 
+// https://pt.stackoverflow.com/questions/122316/contador-javascript-de-clicks
+const btnExercise3 = document.getElementById('btn-exercise-3');
+const clickCount = document.querySelector('#click-count');
+
+btnExercise3.addEventListener('click', () => {
+    let number = parseInt(clickCount.textContent) + 1;
+    clickCount.textContent = number;
+});
 
 
 
