@@ -27,7 +27,11 @@ const lesson1 = {
     return Object.values(objeto);
   }
   console.table(turno(lesson2, 'turno', 'manhã'));
+
   // EXercício 2
+  const listandoChaves = (objeto) => Object.keys(objeto);
+  console.log(listandoChaves(lesson3));
+
   // Exercício 3
   // Exercício 4
   // Exercício 5
