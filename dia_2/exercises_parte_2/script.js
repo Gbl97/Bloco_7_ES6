@@ -40,19 +40,28 @@ const lesson1 = {
 //   const listandoValores = (objeto) => Object.values(objeto);
 //   console.log(listandoValores(lesson2));
 
-  // Exercício 5
-  const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
-  console.log(allLessons);
+//   // Exercício 5
+//   const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+//   console.log(allLessons);
 
-  // Exercício 6
-  const totalDeEstudantes = (objeto) => {
-    const estudantes_1 = objeto.lesson1.numeroEstudantes;
-    const estudantes_2 = objeto.lesson2.numeroEstudantes;
-    const estudantes_3 = objeto.lesson3.numeroEstudantes;
-    const total = estudantes_1 + estudantes_2 + estudantes_3;
+//   // Exercício 6
+//   const totalDeEstudantes = (objeto) => {
+//     const estudantes_1 = objeto.lesson1.numeroEstudantes;
+//     const estudantes_2 = objeto.lesson2.numeroEstudantes;
+//     const estudantes_3 = objeto.lesson3.numeroEstudantes;
+//     const total = estudantes_1 + estudantes_2 + estudantes_3;
 
-    return `Total de Estudantes: ${total}`;
-  }
- console.log(totalDeEstudantes(allLessons));
+//     return `Total de Estudantes: ${total}`;
+//   }
+//  console.log(totalDeEstudantes(allLessons));
+
   // Exercício 7
+  const getValueByNumber = (objeto, chave) => {
+      const key = Object.keys(objeto);
+      let valor = objeto[key[chave]];
+      return valor;
+  }
+  console.log(getValueByNumber(lesson1, 0));
+// Output: 'Matématica'
+
   // Exercício 8
