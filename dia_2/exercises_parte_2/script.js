@@ -39,4 +39,10 @@ const lesson1 = {
   // Exercício 4
   const listandoValores = (objeto) => Object.values(objeto);
   console.log(listandoValores(lesson2));
+
   // Exercício 5
+  const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+  console.log(allLessons);
+  // Exercício 6
+  // Exercício 7
+  // Exercício 8
