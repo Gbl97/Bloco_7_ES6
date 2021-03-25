@@ -17,3 +17,17 @@ const lesson1 = {
     professor: 'Maria Clara',
     turno: 'noite',
   };
+
+  // Exercício 1
+  const turno = (objeto, chave, valor) => {
+     let newKey = chave;
+     chave = valor;
+     objeto[newKey] = chave;
+
+    return Object.values(objeto);
+  }
+  console.table(turno(lesson2, 'turno', 'manhã'));
+  // EXercício 2
+  // Exercício 3
+  // Exercício 4
+  // Exercício 5
