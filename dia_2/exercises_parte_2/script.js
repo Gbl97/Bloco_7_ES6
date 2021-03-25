@@ -33,5 +33,7 @@ const lesson1 = {
   console.log(listandoChaves(lesson3));
 
   // Exercício 3
+  const comprimentoDoObjeto = (objeto) => Object.keys(objeto).length;
+  console.log(comprimentoDoObjeto(lesson1));
   // Exercício 4
   // Exercício 5
