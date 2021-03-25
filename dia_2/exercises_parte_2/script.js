@@ -18,7 +18,7 @@ const lesson1 = {
     turno: 'noite',
   };
 
-  // Exercício 1
+//   // Exercício 1
 //   const turno = (objeto, chave, valor) => {
 //      let newKey = chave;
 //      chave = valor;
@@ -26,24 +26,19 @@ const lesson1 = {
 
 //     return Object.values(objeto);
 //   }
-//   console.table(turno(lesson2, 'turno', 'manhã'));
-
+  
 //   // EXercício 2
 //   const listandoChaves = (objeto) => Object.keys(objeto);
-//   console.log(listandoChaves(lesson3));
 
 //   // Exercício 3
 //   const comprimentoDoObjeto = (objeto) => Object.keys(objeto).length;
-//   console.log(comprimentoDoObjeto(lesson1));
-
+  
 //   // Exercício 4
 //   const listandoValores = (objeto) => Object.values(objeto);
-//   console.log(listandoValores(lesson2));
-
+  
 //   // Exercício 5
 //   const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
-//   console.log(allLessons);
-
+  
 //   // Exercício 6
 //   const totalDeEstudantes = (objeto) => {
 //     const estudantes_1 = objeto.lesson1.numeroEstudantes;
@@ -53,15 +48,33 @@ const lesson1 = {
 
 //     return `Total de Estudantes: ${total}`;
 //   }
-//  console.log(totalDeEstudantes(allLessons));
+ 
+//   // Exercício 7
+//   const getValueByNumber = (objeto, chave) => {
+//       const key = Object.keys(objeto);
+//       let valor = objeto[key[chave]];
+//       return valor;
+//   }
 
-  // Exercício 7
-  const getValueByNumber = (objeto, chave) => {
-      const key = Object.keys(objeto);
-      let valor = objeto[key[chave]];
-      return valor;
-  }
-  console.log(getValueByNumber(lesson1, 0));
-// Output: 'Matématica'
+// // Output: 'Matématica'
 
   // Exercício 8
+  const verifyPair = (objeto, key, value) => {
+
+    if (Object.keys(objeto).includes(key) && Object.values(objeto).includes(value)) {
+        return true;
+    }
+    return false;
+  }
+  console.log(verifyPair(lesson3, 'turno', 'noite')); // Output: true
+  console.log(verifyPair(lesson3, 'materia', 'Beto')); // Output: false
+
+  
+//   console.table(turno(lesson2, 'turno', 'manhã'));
+//   console.log(listandoChaves(lesson3));
+//   console.log(comprimentoDoObjeto(lesson1));
+//   console.log(listandoValores(lesson2));
+//   console.log(allLessons);
+//   console.log(totalDeEstudantes(allLessons));
+//   console.log(getValueByNumber(lesson1, 0));
+//   console.log(getValueByNumber(lesson1, 0));
