@@ -59,4 +59,5 @@ function myRemoveWithoutCopy(arr, item) {
 
 // const array3 = [1, 2, 3, 4, 5, 6, 7, 8];
 // console.log(myRemoveWithoutCopy(array3, 5));
+assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5));
 
